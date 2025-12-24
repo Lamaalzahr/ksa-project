@@ -1,0 +1,72 @@
+.menu-btn {
+background: none;
+border: none;
+color: white;
+font-size: 26px;
+cursor: pointer;
+}
+
+/* خلفية معتمة */
+.overlay {
+position: fixed;
+inset: 0;
+background-color: rgba(0, 0, 0, 0.4);
+z-index: 999;
+}
+
+/* القائمة الجانبية */
+.side-menu {
+position: fixed;
+top: 0;
+right: -300px; /* مخفية */
+width: 300px;
+height: 100vh;
+background-color: white;
+padding: 20px;
+box-shadow: -4px 0 12px rgba(0, 0, 0, 0.2);
+transition: right 0.3s ease;
+z-index: 1000;
+display: flex;
+flex-direction: column;
+}
+
+/* عند الفتح */
+.side-menu.open {
+right: 0;
+}
+
+/* زر الإغلاق */
+.close-btn {
+align-self: flex-end;
+background: none;
+border: none;
+font-size: 22px;
+cursor: pointer;
+margin-bottom: 20px;
+}
+
+/* العناصر */
+.menu-item {
+padding: 12px 0;
+font-size: 18px;
+color: #0f5132;
+cursor: pointer;
+font-weight: 500;
+font-weight: bold;
+}
+
+/* القائمة الفرعية */
+.submenu {
+margin-top: 10px;
+margin-right: 10px;
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+
+.submenu-item {
+font-size: 15px;
+color: #8B6F47;
+cursor: pointer;
+font-weight: normal;
+}

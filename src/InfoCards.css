@@ -1,0 +1,181 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.info-card {
+  padding: 24px;
+  border-radius: 18px;
+  max-width: 420px;
+}
+
+/* الهيدر العام */
+.card-header {
+  display: flex;
+  align-items: center; /* يوازن الأيقونة والنص عموديًا */
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.card-header svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+}
+
+/* العنوان العام */
+.card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* القوائم */
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 14.5px;
+  color: #1c63d4;
+}
+.card-list svg { margin-top: 2px; }
+
+/* الكارد الأزرق */
+.info-card.blue {
+  background-color: #eef4ff;
+  border: 2px solid #3b82f6;
+}
+.info-card.blue .card-header svg { color: #3b82f6; } /* أيقونة الطيارة أزرق */
+.blue-title { color: #1e3a8a; }   
+
+/* الكارد البرتقالي */
+.info-card.orange {
+  background-color: #fff7ed;
+  border: 2px solid #fb923c;
+}
+.orange-header svg { color: #d97706; }
+.orange-title { color: #b45309; }
+.info-card.orange .card-list svg { color: #f97316; }
+
+/* الكارد الفرعية داخل الكارد البرتقالي */
+.season-card {
+  background-color: #ffffff;
+  border: 1.5px solid #fcd34d;
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+.season-card .season-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #b45309;
+  margin-bottom: 4px;
+}
+.season-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #7c2d12;
+}
+
+/* الأمان والسلامة – أخضر فاتح جدًا */
+.info-card.green-light {
+  background-color: #ecfdf5;
+  border: 2px solid #22c55e;
+}
+.green-header svg { color: #16a34a; }
+.green-title { color: #15803d; }
+.info-card.green-light .card-list svg { color: #22c55e; }
+
+/* العملة والدفع – بنفسجي */
+.info-card.purple {
+  background-color: #f3e8ff;
+  border: 2px solid #a78bfa;
+}
+.purple-header svg { color: #7c3aed; }
+.purple-title { color: #6d28d9; }
+.info-card.purple .card-list svg { color: #a78bfa; }
+
+/* اللغة والتواصل – أخضر نعناعي / فستقي */
+.info-card.mint {
+  background-color: #d1fae5;
+  border: 2px solid #10b981;
+}
+.mint-header svg { color: #047857; }
+.mint-title { color: #047857; }
+.white-list li, .white-list li svg { color: #10b981; }
+
+/* أرقام الطوارئ – أحمر */
+.info-card.red {
+  background-color: #fee2e2;
+  border: 2px solid #ef0e0e;
+}
+.red-header svg { color: #b91c1c; }
+.red-title { color: #b91c1c; }
+.white-card {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+/* نصائح للسياح – أصفر فاتح */
+.info-card.yellow-light {
+  background-color: #fef9c3;
+  border: 2px solid #d4ae15;
+}
+.yellow-header svg { color: #b45309; }
+.yellow-title { color: #b45309; }
+.yellow-light .white-list li { color: #d3ac10; }
+
+/* الكارد الأزرق – التأشيرة */
+.info-card.blue .card-header svg { color: #3b82f6; } /* أيقونة */
+.info-card.blue .card-title { color: #1e3a8a; }    /* عنوان */
+.info-card.blue .card-list li { color: #205ab8; }  /* نص القائمة */
+
+/* الكارد البرتقالي – أفضل وقت للزيارة */
+.info-card.orange .card-header svg { color: #d97706; }
+.info-card.orange .card-title { color: #b45309; }
+.info-card.orange .card-list li { color: #7c2d12; }
+
+/* الكارد الأخضر الفاتح جدًا – الأمان والسلامة */
+.info-card.green-light .card-header svg { color: #16a34a; }
+.info-card.green-light .card-title { color: #15803d; }
+.info-card.green-light .card-list li { color: #15803d; }
+
+/* الكارد البنفسجي – العملة والدفع */
+.info-card.purple .card-header svg { color: #7c3aed; }
+.info-card.purple .card-title { color: #6d28d9; }
+.info-card.purple .card-list li { color: #6d28d9; }
+
+/* الكارد الأحمر – أرقام الطوارئ */
+.info-card.red .card-header svg { color: #ef4444; }
+.info-card.red .card-title { color: #b91c1c; }
+.info-card.red .card-list li { color: #b91c1c; }
+
+/* الكارد الأخضر النعناعي – اللغة والتواصل */
+.info-card.mint .card-header svg { color: #047857; }
+.info-card.mint .card-title { color: #047857; }
+.info-card.mint .card-list li { color: #065f46; }
+
+/* الكارد الأصفر – نصائح للسياح */
+.info-card.yellow-light .card-header svg { color: #b45309; }
+.info-card.yellow-light .card-title { color: #b45309; }
+.info-card.yellow-light .card-list li { color: #78350f; }
+
+
+.cards-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 24px;
+margin-top: 320px; /* المسافة من الأعلى لتفادي تداخلها مع الخريطة */
+}
