@@ -1,8 +1,8 @@
 import Navbar from "./navbar";
 import Footer from "./Footer";
 import "./App.css";
-
 import InfoCards from "./InfoCards";
+import MapSection from "./MapSection";
 
 /*import { useNavigate } from "react-router-dom";*/
 
@@ -10,6 +10,9 @@ function App() { /*const navigate = useNavigate();*/
 
 return (
 <>
+<div>
+<MapSection />
+</div>
 <Navbar />
 
 <div className="hero">
@@ -21,12 +24,7 @@ return (
 </div>
 
 
-<div className="map-container">
-<img src="/Ksa-map.svg" className="map-image" />
-</div>
-
-
-<div
+{/*<div
 className="region region-riyadh"
 onClick={() => navigate("/region/riyadh")}
 >
@@ -40,8 +38,7 @@ onClick={() => navigate("/region/riyadh")}
 
 <div className="region region-asir">
 <span className="region-label">عسير</span>
-</div>
-
+</div>*/}
 </div>
 </div>
 
