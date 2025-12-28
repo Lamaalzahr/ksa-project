@@ -34,7 +34,6 @@ return (
 <h3>تابعنا</h3>
 <div className="social">
 <a href="#">Twitter</a>
-{/*<a href="#">Instagram</a>*/}
 <a href="#">LinkedIn</a>
 </div>
 </div>

@@ -4,15 +4,9 @@ import "./App.css";
 import InfoCards from "./InfoCards";
 import MapSection from "./MapSection";
 
-/*import { useNavigate } from "react-router-dom";*/
-
-function App() { /*const navigate = useNavigate();*/
-
+function App() { 
 return (
 <>
-<div>
-<MapSection />
-</div>
 <Navbar />
 
 <div className="hero">
@@ -22,26 +16,12 @@ return (
 <h3>رحلة عبر 13 منطقة، ثقافة غنية، وتراث أصيل</h3>
 <h5>فقط انقر على المنطقة المُراد استكشافها</h5>
 </div>
-
-
-{/*<div
-className="region region-riyadh"
-onClick={() => navigate("/region/riyadh")}
->
-<span className="region-label">الرياض</span>
-</div>
-
-
-<div className="region region-makkah">
-<span className="region-label">مكة</span>
-</div>
-
-<div className="region region-asir">
-<span className="region-label">عسير</span>
-</div>*/}
 </div>
 </div>
 
+<div className="map-container">
+<MapSection />
+</div>
 <InfoCards />
 <Footer />
 

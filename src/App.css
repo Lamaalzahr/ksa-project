@@ -46,11 +46,11 @@ text-decoration: underline;
 }
 
 .hero {
-height: calc(100vh - 70px); 
+height: auto; 
 display: flex;
 justify-content: center;  
 align-items: flex-start;   
-padding-top: 120px;        
+padding-top: 150px;        
 text-align: center;
 }
 
@@ -86,8 +86,6 @@ margin-top: 30px;
 
 .map-image {
 width: 100%;
-/*height: auto;
-display: block; */
 height: 100%;
 object-fit: contain;
 }
@@ -101,7 +99,6 @@ width: 100%;
 
 .map-wrapper {
 position: relative;
-/*width: 500px;*/
 height: auto;
 width: 100%;
 max-width: 500px;
@@ -112,33 +109,6 @@ aspect-ratio: 3 / 4;
 width: 100%;
 display: block;
 }
-
-/* المنطقة القابلة للنقر */
-.region {
-position: absolute;
-cursor: pointer;
-z-index: 2;
-transform: translate(-50%, -50%);
-
-}
-
-/* اسم المنطقة (ظاهر دائمًا) */
-.region-label {
-color: #0f5132;
-padding: 6px 10px;
-border-radius: 6px;
-font-size: 17px;
-font-weight: 600;
-transition: 0.25s ease;
-white-space: nowrap;
-}
-
-/* Hover */
-/*.region:hover .region-label {
-background: #0f5132;
-color: #fff;
-transform: scale(1.1);
-}*/
 
 @media (max-width: 400px) {
 .region-label {
@@ -163,6 +133,18 @@ left: 37%;
 }
 
 .region {
-  cursor: pointer;
+cursor: pointer;
 }
+
+.map-container {
+width: calc(100% - 40px);  
+height: 500px;
+margin: 20px auto; 
+border-radius: 20px;
+overflow: hidden;
+box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+
 

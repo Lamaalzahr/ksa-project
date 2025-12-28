@@ -6,7 +6,6 @@ font-size: 26px;
 cursor: pointer;
 }
 
-/* خلفية معتمة */
 .overlay {
 position: fixed;
 inset: 0;
@@ -14,11 +13,10 @@ background-color: rgba(0, 0, 0, 0.4);
 z-index: 999;
 }
 
-/* القائمة الجانبية */
 .side-menu {
 position: fixed;
 top: 0;
-right: -300px; /* مخفية */
+right: -300px; 
 width: 300px;
 height: 100vh;
 background-color: white;
@@ -30,12 +28,10 @@ display: flex;
 flex-direction: column;
 }
 
-/* عند الفتح */
 .side-menu.open {
 right: 0;
 }
 
-/* زر الإغلاق */
 .close-btn {
 align-self: flex-end;
 background: none;
@@ -45,7 +41,6 @@ cursor: pointer;
 margin-bottom: 20px;
 }
 
-/* العناصر */
 .menu-item {
 padding: 12px 0;
 font-size: 18px;
@@ -55,7 +50,6 @@ font-weight: 500;
 font-weight: bold;
 }
 
-/* القائمة الفرعية */
 .submenu {
 margin-top: 10px;
 margin-right: 10px;

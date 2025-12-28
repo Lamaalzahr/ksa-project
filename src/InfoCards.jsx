@@ -9,7 +9,6 @@ function InfoCards() {
 return (
 <div className="cards-container">
 
-{/* الكارد الأولى – التأشيرة السياحية */}
 <div className="info-card blue">
 <div className="card-header">
 <Plane size={22} />
@@ -23,7 +22,6 @@ return (
 </ul>
 </div>
 
-{/* الكارد الثانية – أفضل وقت للزيارة */}
 <div className="info-card orange">
 <div className="card-header orange-header">
 <CloudSun size={22} />
@@ -45,7 +43,6 @@ return (
 </div>
 </div>
 
-{/* الكارد الثالثة – الأمان والسلامة */}
 <div className="info-card green-light">
 <div className="card-header green-header">
 <Shield size={22} />
@@ -58,7 +55,6 @@ return (
 </ul>
 </div>
 
-{/* الكارد الرابعة – العملة والدفع */}
 <div className="info-card purple">
 <div className="card-header purple-header">
 <DollarSign size={22} />
@@ -71,7 +67,6 @@ return (
 </ul>
 </div>
 
-{/* الكارد الخامسة – اللغة والتواصل */}
 <div className="info-card mint">
 <div className="card-header mint-header">
 <Globe size={22} />
@@ -84,7 +79,6 @@ return (
 </ul>
 </div>
 
-{/* الكارد السادسة – أرقام الطوارئ */}
 <div className="info-card red">
 <div className="card-header red-header">
 <AlertTriangle size={22} />
@@ -104,7 +98,6 @@ return (
 </div>
 </div>
 
-{/*نصائح للسياح */}
 <div className="info-card yellow-light">
 <div className="card-header yellow-header">
 <Info size={22} />

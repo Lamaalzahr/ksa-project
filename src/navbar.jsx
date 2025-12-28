@@ -2,10 +2,8 @@ import { useState } from "react";
 import "./Navbar.css";
 import VisaInfoDrawer from "./VisaInfoDrawer";
 
-
 function Navbar() {
 const [open, setOpen] = useState(false);
-
 return (
 <>
 <nav className="navbar">
@@ -19,7 +17,6 @@ onClick={() => setOpen(true)}
 </button>
 </nav>
 
-{/* خلفية معتمة */}
 {open && (
 <div
 className="overlay"
@@ -27,7 +24,6 @@ onClick={() => setOpen(false)}
 ></div>
 )}
 
-{/* القائمة الجانبية */}
 <div className={`side-menu ${open ? "open" : ""}`}>
 <button
 className="close-btn"
@@ -36,11 +32,10 @@ onClick={() => setOpen(false)}
 ✕
 </button>
 
- <div className="drawer">
-      {/* أي محتوى آخر للـ Drawer */}
-      
-      <VisaInfoDrawer />
-    </div>
+<div className="drawer">
+
+<VisaInfoDrawer />
+</div>
 
 <div className="menu-item">الرئيسية</div>
 
@@ -57,7 +52,6 @@ onClick={() => setOpen(false)}
 
 <div className="menu-item">تواصل معنا</div>
 </div>
-
 
 </>
 );
