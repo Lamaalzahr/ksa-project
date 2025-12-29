@@ -1,13 +1,14 @@
 import { useParams } from "react-router-dom";
 
 function RegionPage() {
-const { name } = useParams();
+  const { id } = useParams();
 
-return (
-<div>
-<h1>أهلاً بك في منطقة: {name}</h1>
-</div>
-);
+  return (
+    <div style={{ padding: "40px" }}>
+      <h1>منطقة: {id}</h1>
+      <p>هنا محتوى خاص بكل منطقة</p>
+    </div>
+  );
 }
 
 export default RegionPage;

@@ -3,6 +3,9 @@ import Footer from "./Footer";
 import "./App.css";
 import InfoCards from "./InfoCards";
 import MapSection from "./MapSection";
+import { Routes, Route } from "react-router-dom";
+import RegionPage from "./RegionPage";
+
 
 function App() { 
 return (
@@ -25,7 +28,10 @@ return (
 <InfoCards />
 <Footer />
 
-
+ <Routes>
+      <Route path="/" element={<MapPage />} />
+      <Route path="/region/:id" element={<RegionPage />} />
+    </Routes>
 </>
 );
 } 
