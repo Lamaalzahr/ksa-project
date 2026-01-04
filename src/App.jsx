@@ -2,9 +2,14 @@ import Navbar from "./navbar";
 import Footer from "./Footer";
 import "./App.css";
 import InfoCards from "./InfoCards";
+
 import MapSection from "./MapSection";
+
 import { Routes, Route } from "react-router-dom";
 import RegionPage from "./RegionPage";
+
+import MainLayout from "./layouts/MainLayout";
+import RegionLayout from "./layouts/RegionLayout";
 
 
 function App() { 
@@ -26,9 +31,16 @@ return (
 <MapSection />
 </div>
 
- <Routes>
-  {/*<Route path="/" element={<MapPage />} />*/}
-      <Route path="/region/:id" element={<RegionPage />} />
+  <Routes>
+      {/* الصفحة الرئيسية */}
+      <Route element={<MainLayout />}>
+        <Route path="/" element={<MapSection />} />
+      </Route>
+
+      {/* صفحات المناطق */}
+      <Route element={<RegionLayout />}>
+        <Route path="/region/:id" element={<RegionPage />} />
+      </Route>
     </Routes>
 
 <InfoCards />

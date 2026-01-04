@@ -5,8 +5,8 @@ function RegionPage() {
 
   return (
     <div style={{ padding: "40px" }}>
-      <h1>منطقة: {id}</h1>
-      <p>هنا محتوى خاص بكل منطقة</p>
+      <h1>منطقة {id}</h1>
+      <p>محتوى خاص بالمنطقة فقط.</p>
     </div>
   );
 }
