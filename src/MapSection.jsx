@@ -1,4 +1,4 @@
-{/*import React, { useState } from "react";
+import React, { useState } from "react";
 import Map, { Marker } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
@@ -22,9 +22,9 @@ mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
 );
 }
 
-export default MapSection;*/}
+export default MapSection;
 
-import Map, { Source, Layer } from "react-map-gl";
+{/*import Map, { Source, Layer } from "react-map-gl";
 import { useNavigate } from "react-router-dom";
 import regions from "./data/regions";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -67,3 +67,4 @@ function MapPage() {
 }
 
 export default MapPage;
+*/}

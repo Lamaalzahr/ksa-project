@@ -25,13 +25,19 @@ return (
 <div className="map-container">
 <MapSection />
 </div>
+
+ <Routes>
+  {/*<Route path="/" element={<MapPage />} />*/}
+      <Route path="/region/:id" element={<RegionPage />} />
+    </Routes>
+
 <InfoCards />
 <Footer />
-
+{/*
  <Routes>
       <Route path="/" element={<MapPage />} />
       <Route path="/region/:id" element={<RegionPage />} />
-    </Routes>
+    </Routes>*/ }
 </>
 );
 } 
