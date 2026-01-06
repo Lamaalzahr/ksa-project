@@ -17,6 +17,7 @@ align-items: center;
 gap: 10px;
 margin-bottom: 16px;
 }
+
 .card-header svg {
 flex-shrink: 0;
 width: 24px;

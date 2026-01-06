@@ -8,9 +8,9 @@ import "./InfoCards.css";
 function InfoCards() {
 return (
 <div className="cards-container">
-
 <div className="info-card blue">
 <div className="card-header">
+    
 <Plane size={22} />
 <h3 className="card-title blue-title">التأشيرة السياحية</h3>
 </div>
@@ -112,7 +112,6 @@ return (
 <li>استمتع بكرم الضيافة السعودية</li>
 </ul>
 </div>
-
 </div>
 );
 }

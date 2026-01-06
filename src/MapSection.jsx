@@ -30,40 +30,40 @@ import regions from "./data/regions";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 function MapPage() {
-  const navigate = useNavigate();
+const navigate = useNavigate();
 
-  const handleClick = (e) => {
-    const feature = e.features?.[0];
-    if (!feature) return;
+const handleClick = (e) => {
+const feature = e.features?.[0];
+if (!feature) return;
 
-    navigate(`/region/${feature.properties.id}`);
-  };
+navigate(`/region/${feature.properties.id}`);
+};
 
-  return (
-    <Map
-      mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
-      initialViewState={{
-        longitude: 44,
-        latitude: 23,
-        zoom: 5
-      }}
-      style={{ width: "100vw", height: "100vh" }}
-      mapStyle="mapbox://styles/mapbox/light-v11"
-      interactiveLayerIds={["regions-layer"]}
-      onClick={handleClick}
-    >
-      <Source id="regions" type="geojson" data={regions}>
-        <Layer
-          id="regions-layer"
-          type="circle"
-          paint={{
-            "circle-radius": 8,
-            "circle-color": "#ff4d6d"
-          }}
-        />
-      </Source>
-    </Map>
-  );
+return (
+<Map
+mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
+initialViewState={{
+longitude: 44,
+latitude: 23,
+zoom: 5
+}}
+style={{ width: "100vw", height: "100vh" }}
+mapStyle="mapbox://styles/mapbox/light-v11"
+interactiveLayerIds={["regions-layer"]}
+onClick={handleClick}
+>
+<Source id="regions" type="geojson" data={regions}>
+<Layer
+id="regions-layer"
+type="circle"
+paint={{
+"circle-radius": 8,
+"circle-color": "#ff4d6d"
+}}
+/>
+</Source>
+</Map>
+);
 }
 
 export default MapPage;

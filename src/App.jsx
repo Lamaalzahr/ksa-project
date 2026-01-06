@@ -31,25 +31,27 @@ return (
 <MapSection />
 </div>
 
+
+
   <Routes>
-      {/* الصفحة الرئيسية */}
-      <Route element={<MainLayout />}>
-        <Route path="/" element={<MapSection />} />
-      </Route>
+  {/* الصفحة الرئيسية */}
+  <Route element={<MainLayout />}>
+  <Route path="/" element={<MapSection />} />
+  </Route>
 
-      {/* صفحات المناطق */}
-      <Route element={<RegionLayout />}>
-        <Route path="/region/:id" element={<RegionPage />} />
-      </Route>
-    </Routes>
+  {/* صفحات المناطق */}
+  <Route element={<RegionLayout />}>
+  <Route path="/region/:id" element={<RegionPage />} />
+  </Route>
+  </Routes>
 
-<InfoCards />
-<Footer />
-{/*
- <Routes>
-      <Route path="/" element={<MapPage />} />
-      <Route path="/region/:id" element={<RegionPage />} />
-    </Routes>*/ }
+  <InfoCards />
+  <Footer />
+  {/*
+  <Routes>
+  <Route path="/" element={<MapPage />} />
+  <Route path="/region/:id" element={<RegionPage />} />
+  </Routes>*/ }
 </>
 );
 } 

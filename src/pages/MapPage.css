@@ -1,46 +1,45 @@
 /*.hero {
-  text-align: center;
-  padding-top: 120px;
+text-align: center;
+padding-top: 120px;
 }
 
 .hero-content h2 {
-  font-size: 48px;
-  color: #006C35;
-  font-weight: bold;
+font-size: 48px;
+color: #006C35;
+font-weight: bold;
 }
 
 .hero-content h3,
 .hero-content h5 {
-  color: #8B6F47;
-  max-width: 600px;
-  margin: auto;
+color: #8B6F47;
+max-width: 600px;
+margin: auto;
 }
 
 .map-wrapper {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
+position: relative;
+width: 100%;
+max-width: 900px;
+margin: auto;
 }
 
 .map-image {
-  width: 100%;
-  height: auto;
+width: 100%;
+height: auto;
 }
 
 .map-region {
-  position: absolute;
-  color: white;
-  background-color: #006C35;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-weight: bold;
-  text-decoration: none;
-  cursor: pointer;
-  transform: translate(-50%, -50%);
+position: absolute;
+color: white;
+background-color: #006C35;
+padding: 4px 8px;
+border-radius: 4px;
+font-weight: bold;
+text-decoration: none;
+cursor: pointer;
+transform: translate(-50%, -50%);
 }
 
 .map-region:hover {
-  background-color: #004b24; 
-}
-*/
+background-color: #004b24; 
+} */

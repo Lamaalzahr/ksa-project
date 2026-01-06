@@ -6,7 +6,6 @@ function RegionLayout() {
     <>
       <Outlet />
 
-      {/* الكروت تبقى في صفحات المناطق */}
       <InfoCards />
     </>
   );
