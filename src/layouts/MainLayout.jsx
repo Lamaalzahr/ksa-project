@@ -4,9 +4,9 @@ function MainLayout() {
   return (
     <>
       <header>
-        <h1>اكتشف مناطق المملكة</h1>
+       {/* <h1>اكتشف مناطق المملكة</h1> */} 
       </header>
-
+       {/* <MapSection />*/ }
       <Outlet />
     </>
   );
