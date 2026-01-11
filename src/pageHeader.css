@@ -1,0 +1,28 @@
+.page-header {
+  max-width: 1166px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 12px;
+}
+
+.breadcrumb a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+.breadcrumb span {
+  margin: 0 6px;
+}
+
+.header-image img {
+  width: 100%;
+  aspect-ratio: 1166 / 618;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}

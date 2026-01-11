@@ -1,83 +1,98 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // <-- مهم
+import { useNavigate } from "react-router-dom";
 import Map, { Marker, Popup } from "react-map-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 function MapSection() {
-  const navigate = useNavigate(); // <--- نستخدمه للتنقل
+  const navigate = useNavigate();
+
   const [viewState, setViewState] = useState({
     latitude: 24,
     longitude: 45,
     zoom: 5,
   });
 
-  const [showPopup, setShowPopup] = useState(false); // لعرض نص عند hover/ضغط
+  const [hoveredRegion, setHoveredRegion] = useState(null);
 
-  // بيانات النقاط / المناطق
-  const regions = [
-    {
-      id: "riyadh",
-      name: "الرياض",
-      latitude: 24.7136,
-      longitude: 46.6753,
-    },
-    // ممكن تضيفين مناطق ثانية هنا لاحقًا
-    // { id: "jeddah", name: "جدة", latitude: 21.4858, longitude: 39.1979 }
-  ];
+const regions = [
+{
+id: "riyadh",
+name: "الرياض",
+latitude: 24.7117,
+longitude: 46.6740,
+image: "/Ryiadh.png",
+},
+];
 
   return (
     <Map
       {...viewState}
-      onMove={(evt) => setViewState(evt.viewState)}
+      onMove={(e) => setViewState(e.viewState)}
       style={{ width: "100%", height: "500px" }}
       mapStyle="mapbox://styles/mapbox/streets-v12"
       mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
     >
       {regions.map((region) => (
-        <div key={region.id}>
-          <Marker
-  latitude={region.latitude}
-  longitude={region.longitude}
-  anchor="bottom" // هذا مهم عشان المسمار يكون فوق النقطة الصحيحة
->
-  <div
-    style={{
-      width: "40px",
-      height: "60px",
-      position: "relative",
-      cursor: "pointer",
-      transform: "translate(100%, 270%)", // لضبط المسمار تمام
-    }}
-    >
-        <div
-        style={{
-            width: "24px",
-            height: "24px",
-            borderRadius: "50%",
-            border: "2px solid white",
-            overflow: "hidden",
-            backgroundColor: "green",
-            postion: "absolute",
-            tob: 0,
-            left: "50%",
-            transform: "translateX(-50%)",
-        }}
+        <Marker
+          key={region.id}
+          latitude={region.latitude}
+          longitude={region.longitude}
+          anchor="bottom"
         >
-   {/*</div> onClick={() => navigate(`/region/${region.id}`)}
-    onMouseEnter={() => setShowPopup(region.id)}
-    onMouseLeave={() => setShowPopup(false)*/}
-  
-    <img
-      src="/region-image.png"  // الصورة التي تريدين إضافتها داخل الدائرة
-      alt="region"
-      style={{ width: "100%", height: "100%", objectFit: "cover" }}
-    />
-  </div>
-</Marker>
+          {/* جسم الدبوس */}
+          <div
+            onClick={() => navigate(`/region/${region.id}`)}
+            onMouseEnter={() => setHoveredRegion(region.id)}
+            onMouseLeave={() => setHoveredRegion(null)}
+            style={{
+              width: "40px",
+              height: "60px",
+              position: "relative",
+              cursor: "pointer",
+              transform: "translate(-50%, -100%)", // ⭐ الوحيد المسموح
+            }}
+          >
+            {/* الدائرة */}
+            <div
+              style={{
+                width: "26px",
+                height: "26px",
+                borderRadius: "50%",
+                border: "3px solid white",
+                overflow: "hidden",
+                backgroundColor: "green",
+                position: "absolute",
+                top: "0",
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 2,
+              }}
+            >
+              <img
+                src={region.image}
+                alt={region.name}
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+            </div>
 
+            {/* رأس الدبوس */}
+            <div
+              style={{
+                width: 0,
+                height: 0,
+                borderLeft: "12px solid transparent",
+                borderRight: "12px solid transparent",
+                borderTop: "32px solid green",
+                position: "absolute",
+                top: "24px",
+                left: "50%",
+                transform: "translateX(-50%)",
+              }}
+            />
+          </div>
 
-          {/* Popup يظهر عند hover */}
-          {showPopup === region.id && (
+          {/* Popup */}
+          {hoveredRegion === region.id && (
             <Popup
               latitude={region.latitude}
               longitude={region.longitude}
@@ -88,7 +103,7 @@ function MapSection() {
               {region.name}
             </Popup>
           )}
-        </div>
+        </Marker>
       ))}
     </Map>
   );
