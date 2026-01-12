@@ -8,7 +8,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 <App />
 </BrowserRouter>
 );
-
 export default main;
 
 

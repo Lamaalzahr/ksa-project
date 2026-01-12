@@ -1,18 +1,13 @@
 import { useParams } from "react-router-dom";
 
 function RegionPage() {
-  const { id } = useParams();
+const { id } = useParams();
 
-  return (
-    <div className="region-page">
-      
+return (
+<div className="region-page">
 
-
-
-
-
-    </div>
-  );
+</div>
+);
 }
 
 export default RegionPage;

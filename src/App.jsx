@@ -19,19 +19,19 @@ return (
 <Navbar />
 
 
- <Routes>
-       <Route path="/" element={<HomePage />} />
+<Routes>
+<Route path="/" element={<HomePage />} />
 <Route path="/region/riyadh" element={<Riyadh />} />
 
 
-        <Route element={<RegionLayout />}>
-          <Route path="/region/:id" element={<RegionPage />} />
+<Route element={<RegionLayout />}>
+<Route path="/region/:id" element={<RegionPage />} />
 </Route>
 </Routes>
 
- 
-  <Footer />
-  
+
+<Footer />
+
 </>
 );
 } 
