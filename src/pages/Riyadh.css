@@ -1,0 +1,153 @@
+/* ===== الصفحة ===== */
+.region-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+  color: #222;
+  background: #fdfdfd;
+}
+
+/* ===== الهيدر ===== */
+.region-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 70px;
+  background: linear-gradient(135deg, #e0f7f4, #ffffff);
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.region-title {
+  font-size: 50px;
+  font-weight: 700;
+  color: #0f766e;
+  margin: 0;
+}
+
+.region-description {
+  font-size: 19px;
+  line-height: 1.9;
+  color: #444;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.header-cta {
+  margin-top: 20px;
+}
+
+.btn-explore {
+  background: #0f766e;
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-explore:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+}
+
+/* ===== الأقسام ===== */
+.section-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 35px;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+/* ===== الكروت ===== */
+.region-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 20px 0;
+  font-size: 20px;
+  color: #0f766e;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+/* ===== نصائح ===== */
+.region-tips {
+  background: #e6f2f1;
+  padding: 40px 30px;
+  border-radius: 16px;
+  margin-top: 60px;
+}
+
+.tips-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tips-list li {
+  font-size: 17px;
+  margin-bottom: 15px;
+  padding-left: 35px;
+  position: relative;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+.tips-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #0f766e;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .region-title {
+    font-size: 36px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .region-description {
+    font-size: 16px;
+  }
+
+  .card img {
+    height: 150px;
+  }
+}
